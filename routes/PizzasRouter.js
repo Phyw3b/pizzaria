@@ -1,4 +1,5 @@
 // Importando o express
+const { application } = require('express');
 const express = require('express');
 
 // Criando o roteador
@@ -8,7 +9,8 @@ const router = express.Router();
 const PizzasController = require('../controllers/PizzasController');
 
 // Criando rota que encaminha requisição para o PizzasController.index
-router.get('/', PizzasController.index)
+router.get('/', PizzasController.index);
+
 
 // Exportando o roteador
 module.exports = router;
